@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ByteBank.Modelos</name>
+    </assembly>
+    <members>
+        <member name="T:ByteBank.Modelos.ContaCorrente">
+            <summary>
+            Define uma conta Conta Corrente do banco ByteBank.
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:ByteBank.Modelos.ContaCorrente.#ctor(System.Int32,System.Int32)" -->
+        <member name="M:ByteBank.Modelos.ContaCorrente.Sacar(System.Double)">
+            <summary>
+            Realiza o saque e atualiza o valor de <see cref="P:ByteBank.Modelos.ContaCorrente.Saldo"/>
+            </summary>
+            <exception cref="T:System.ArgumentException">Execão lançada quando um valor negativo é usado no argumento<paramref name="valor"/> é maior que o valor da propriedade <see cref="P:ByteBank.Modelos.ContaCorrente.Saldo"/></exception>
+            <param name="valor">Representa o valor do saque, deve ser maior que 0 e maior que <see cref="P:ByteBank.Modelos.ContaCorrente.Saldo"/></param>
+        </member>
+        <member name="M:ByteBank.Modelos.ContaCorrente.Depositar(System.Double)">
+            <summary>
+            Deposita o valor e atualiza o valor de <see cref="P:ByteBank.Modelos.ContaCorrente.Saldo"/>see
+            </summary>
+            <param name="valor">Valor do saque</param>
+        </member>
+        <member name="M:ByteBank.Modelos.ContaCorrente.Transferir(System.Double,ByteBank.Modelos.ContaCorrente)">
+            <summary>
+            Transefere o dinheiro de uma conta para outra e atualiza o <see cref="P:ByteBank.Modelos.ContaCorrente.Saldo"/> de ambas
+            </summary>
+            <param name="valor"></param>
+            <param name="contaDestino"></param>
+        </member>
+    </members>
+</doc>
